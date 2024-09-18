@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Calcular IMC</title>
+</head>
+
+<body>
+  <header>
+    <h1>Calcular IMC</h1>
+  </header>
+
+  <section>
+    <form>
+      <label for="txthomem">Masculino</label>
+      <input type="radio" name="radiosex" id="txthomem" checked>
+
+      <label for="txtmulher">Feminino</label>
+      <input type="radio" name="radiosex" id="txtmulher">
+
+      Altura:<input type="number" placeholder="ex: 1.76" name="txtaltura" id="txtaltura">
+      Peso:<input type="number" placeholder="ex: 56" name="txtpeso" id="txtpeso">
+      <input type="button" value="Verificar" onclick="verificar()">
+      <input type="reset" name="txtreset" value="Limpar" onclick="limpar()">
+    </form>
+
+    <div id="resultado"></div>
+  </section>
+
+  <script src="./15-3.js"></script>
+</body>
+
+</html>
