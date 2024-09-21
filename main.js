@@ -1,3 +1,5 @@
+let body = document.querySelector("body");
+body.style.background = "linear-gradient(to right, #fafafa, #ffffff)";
 function verificar() {
   var num_altura = document.getElementById("txtaltura");
   var altura = Number(num_altura.value);
@@ -5,19 +7,15 @@ function verificar() {
   var peso = Number(num_peso.value);
   var formSex = document.getElementsByName("radiosex");
   var resultado = document.getElementById("resultado");
+  resultado.style.textAlign = "center";
   var genero = "";
   var imc = peso / (altura * altura);
-  var img = document.createElement("img");
-  img.setAttribute("id", "foto");
-  img.style.width = "250px";
-  img.style.height = "250px";
   resultado.innerHTML += `<p>Voce está com IMC de <strong> ${imc.toFixed(
     2
   )}</strong></p>`;
 
   if (formSex[0].checked) {
     genero = "Homem";
-    img.src = "./homem.png";
     resultado.innerHTML += `<p>Voce e <strong>${genero}</strong></p>`;
     if (imc < 17) {
       resultado.innerHTML += `<p>Muito abaixo do peso!</p>`;
@@ -38,7 +36,6 @@ function verificar() {
     //  SE FOR MULHER
   } else if (formSex[1].checked) {
     genero = "Mulher";
-    img.src = "./mulher.png";
     resultado.innerHTML += `<p>Voce e <strong>${genero}</strong></p>`;
     if (imc < 16) {
       resultado.innerHTML += `<p>Muito abaixo do peso!</p>`;
@@ -56,15 +53,8 @@ function verificar() {
       resultado.innerHTML += `<p>Obesidade grau 3!</p>`;
     }
   }
-  resultado.appendChild(img);
 }
 // LIMPA O RESULTADO
 function limpar() {
   document.getElementById("resultado").innerHTML = "";
-
-  // VERIFICA SE A IMAGEM EXISTE PRA LIMPAR
-  var img = document.getElementById("foto");
-  if (img) {
-    img.src = "";
-  }
 }

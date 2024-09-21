@@ -1,14 +1,41 @@
-html {
-  text-align: center;
+@import url("./global.css");
+
+#secao {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
-section {
+#bg {
   max-width: 400px;
+  height: auto;
+
+  height: auto;
   margin: 0 auto;
-  background-color: #ebebeb;
   padding: 20px;
 }
-form {
-  display: grid;
-  justify-content: center;
-  gap: 10px;
+.genero {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 10px;
+}
+.dados {
+  width: 100%;
+}
+.btns {
+  width: 100%;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e9e9e9;
+  margin: 10px 0;
+  border-radius: 5px;
 }
